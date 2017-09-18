@@ -151,8 +151,18 @@ Employee Employees::getEmployeeByIndex(unsigned int index) const {
 	return Employee(); // Will return an invalid, empty employee when an actual employee in the array can't be found
 }
 Employee Employees::getEmployeeByLastName(string lastName) const {
+	string inputLastName;
+
+	for (const char & letter : lastName) 
+		inputLastName += toupper(letter);
+
 	for (size_t i = 0; i < employeesLength; i++) {
-		if (employees[i].getLastName() == lastName)
+		string employeeLastName;
+		
+		for (const char & letter : employees[i].getLastName())
+			employeeLastName += toupper(letter);
+
+		if (inputLastName == employeeLastName)
 			return employees[i];
 	}
 	return Employee(); // Will return an invalid, empty employee when given an unknown name

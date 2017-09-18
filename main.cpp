@@ -1,12 +1,18 @@
 #include <assert.h>
+#include <sstream>
 #include "Employee.h"
 #include "Employees.h"
 
 using namespace std;
 
 void doUnitTesting();
+void testEmployeeClass();
+void testEmployeesClass();
 
-const bool UNIT_TESTING = false;
+template <typename T>
+bool promptForValue(T & value, string promptMessage = "", string errorMessage = "");
+
+const bool UNIT_TESTING = true;
 
 
 
@@ -15,9 +21,8 @@ int main() {
 
 	/* Read in Employee Info input file */
 	string inputFileName;
-	cout << "Please provide an input file to read from: ";
-	cin >> inputFileName;
-	cout << endl;
+
+	promptForValue(inputFileName, "Please provide an input file to read from: ");
 
 	ifstream infile(inputFileName);
 
@@ -66,11 +71,8 @@ int main() {
 
 		int menuOption;
 		cout << "Enter your choice: ";
-		cin >> menuOption;
 
-		if (!cin) { // Bad input given
-			cin.clear();
-			cin.ignore(100000, '\n');
+		if (!promptForValue(menuOption)) { // Bad input given
 			cout << "Please select a number from 1 to 3" << endl << endl;
 			continue; // Display menu again
 		}
@@ -79,19 +81,14 @@ int main() {
 		case 1: {
 			int employeeIdNumber;
 			cout << "Enter the employee's ID Number: ";
-			cin >> employeeIdNumber;
-			cout << endl;
 
-			if (!cin) { // Bad input given
-				cin.clear();
-				cin.ignore(100000, '\n');
+			if (!promptForValue(employeeIdNumber)) { // Bad input given
 				cout << "Invalid ID Number Given" << endl << endl;
 				continue; // Display menu again
 			}
 
 			Employee employee = employees.getEmployeeByID(employeeIdNumber);
 			if (employee.getIsEmptyEmployee()) {
-				cin.ignore(10000, '\n');
 				cout << "An employee with ID " << employeeIdNumber << " could not be found." << endl << endl;
 				continue;
 			}
@@ -109,20 +106,24 @@ int main() {
 		case 2: {
 			string employeeLastName;
 			cout << "Enter the employee's last name: ";
-			cin >> employeeLastName;
-			cout << endl;
 
-			Employee employee = employees.getEmployeeByLastName(employeeLastName); // If last name couldn't be found, an empty employee is created
-			if (employee.getIsEmptyEmployee()) {
-				cin.ignore(10000, '\n');
-				cout << "The employee \"" << employeeLastName << "\" could not be found." << endl << endl;
-				continue;
+			if (promptForValue(employeeLastName)) {
+				Employee employee = employees.getEmployeeByLastName(employeeLastName); // If last name couldn't be found, an empty employee is created
+
+				if (employee.getIsEmptyEmployee()) {
+					cout << "The employee \"" << employeeLastName << "\" could not be found." << endl << endl;
+					continue;
+				}
+				else {
+					employee.writeToConsole(cout);
+					cout << endl;
+					continue;
+				}
 			}
-			else {
-				employee.writeToConsole(cout);
-				cout << endl;
-				continue;
-			}
+			else
+				cout << "Invalid last name given" << endl;
+			
+			continue;
 		}
 
 		case 3:
@@ -137,7 +138,19 @@ int main() {
 
 
 void doUnitTesting() {
+	cout << "Starting Unit Tests..." << endl;
+	cout << "----------------------------------------------------" << endl;
+	testEmployeeClass();
+	testEmployeesClass();
+	
+	
+	cout << "All tests passed" << endl;
+	cout << "-----------------------------------------------------" << endl;
+}
+
+void testEmployeeClass() {
 	/* Test Employee Class */
+	cout << "Testing the Employee Class..." << endl;
 	Employee employee_1 = Employee(
 		false,
 		"Anthony",
@@ -184,8 +197,12 @@ void doUnitTesting() {
 	assert(employee_2.getEmployeeBasePay() == EMPLOYEE_CODE_S_BASE_PAY);
 	assert(employee_2.getGrossSalary() == 1320);
 
-
+	cout << endl;
+}
+void testEmployeesClass() {
 	/* Test Employees Class */
+	cout << "Testing the Employees Class..." << endl;
+
 	ifstream inputFile1("namelist.txt");
 	ifstream inputFile2("namelist2.txt");
 	ifstream inputFile3("namelist3.txt");
@@ -242,9 +259,9 @@ void doUnitTesting() {
 	employeesContainer[0].sort(EMPLOYEE_SORT_FLAGS::GROSS_SALARY);
 
 	assert(employeesContainer[0].getEmployeeByIndex(0).getIsValidEmployee() == false); // All invalid employees should have invalid Gross Salaries
-																					  // and so should be first in the array
+																					   // and so should be first in the array
 	assert(employeesContainer[0].getEmployeeByIndex(0).getGrossSalary() == -1);
-	
+
 
 	// Find and test against the first Valid Employee
 	for (size_t i = 0; i < employeesContainer[0].getEmployeesLength(); i++) {
@@ -277,7 +294,31 @@ void doUnitTesting() {
 	assert(employeeById.getJobType() == "Office Worker");
 	assert(employeeById.getEmployeeBasePay() == EMPLOYEE_CODE_O_BASE_PAY);
 	assert(employeeById.getGrossSalary() == 1690);
-	
+}
 
-	cout << "All tests passed" << endl;
+template <typename T>
+bool promptForValue(T & value, string promptMessage, string errorMessage) {
+
+	string strInput;
+
+	if (!promptMessage.empty())
+		cout << promptMessage;
+
+	getline(cin, strInput); // Read user input as string
+	stringstream sstreamInput(strInput); // turns the string into a stream
+
+	// Checks for complete conversion to the return type T
+	if (
+		sstreamInput >> value &&
+		!(sstreamInput >> strInput) // Make sure that no garbage is left in sstreamInput
+	)
+		return true;
+	else {
+		cin.clear(); // just in case if cin entered a bad state
+
+		if(!errorMessage.empty())
+			cout << errorMessage << endl;
+
+		return false;
+	}
 }
