@@ -1,0 +1,18 @@
+Jeff Smith
+M 1234 3 12 2
+Jack Khan
+S 23414 2 5 2
+Joe Lee
+O 3452 2 32 1
+Lary Mann
+M 5432 1 21 4
+Ben George
+S 6543 3 23 2
+George Washington
+S 5643 3 56 2
+Jack Adams
+O 6743 3 22 3
+Sara Jones
+S 5439 2 49 1
+Sandy Beckman
+M 5555 3 32 4

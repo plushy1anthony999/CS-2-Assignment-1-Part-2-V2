@@ -1,0 +1,62 @@
+Jeff Smith
+M 1234 3 12 2
+Jack Khan
+S 23414 2 5 2
+Joe Lee
+O 3452 2 32 1
+Lary Mann
+M 5432 1 21 4
+Ben George
+S 6543 3 23 2
+George Washington
+S 5643 3 56 2
+Jack Adams
+O 6743 3 22 3
+Sara Jones
+S 5439 2 49 1
+Sandy Beckman
+M 5555 3 32 4
+Mike Hammer
+s 5434 3 21 1
+Jeff Summer
+M 1294 3 22 3
+Jack Ali-Khan
+S 2341 2 15 2
+Joe Lynche
+O 3492 2 22 4
+Lory Mannville
+M 5402 3 29 4
+Barb Georgeville
+S 6943 3 43 2
+George Hamington
+S 5673 3 36 2
+John Adam
+O 6703 3 42 3
+Sara Jackson
+S 5400 2 4 4
+Sandra Barbs
+M 5995 3 6 2
+Micky Jordan 
+s 5104 3 11 2
+Jeffery Stone
+M 9234 2 32 2
+Jacky Karman
+S 9341 3 12 2
+Joe Larson
+O 9452 3 3 4
+Lary Madison
+O 9432 2 25 4
+Benjamin Franklin
+S 9543 3 43 2
+George Albertson
+S 9643 2 50 4
+Jack Orteda
+O 9743 3 12 4
+Carl Melon 
+S 9439 2 9 3
+Sandy Bachman
+M 9555 3 39 2
+Mike Harison
+s 9434 3 20 3
+Massoud Ghyamkah
+M 1235 1 1 1

@@ -1,0 +1,136 @@
+Unsorted Employees: 
+
+Name                ID#       Job Type        Gross Salary    
+Jeff Smith          1234      Management      $1980.00         
+Jack Khan           23414     Factory Worker  $960.00          
+Joe Lee             3452      Office Worker   $1370.00         
+Lary Mann           5432      Management      $2115.00         
+Ben George          6543      Factory Worker  $1144.00         
+George Washington   5643      Factory Worker  N/A             
+Jack Adams          6743      Office Worker   $1490.00         
+Sara Jones          5439      Factory Worker  $1232.00         
+Sandy Beckman       5555      Management      $2505.00         
+Mike Hammer         5434      N/A             N/A             
+Jeff Summer         1294      Management      $2235.00         
+Jack Ali-Khan       2341      Factory Worker  $1000.00         
+Joe Lynche          3492      Office Worker   $1470.00         
+Lory Mannville      5402      Management      $2460.00         
+Barb Georgeville    6943      Factory Worker  $1304.00         
+George Hamington    5673      Factory Worker  $1248.00         
+John Adam           6703      Office Worker   $1690.00         
+Sara Jackson        5400      Factory Worker  $1080.00         
+Sandra Barbs        5995      Management      $1950.00         
+Micky Jordan        5104      N/A             N/A             
+Jeffery Stone       9234      Management      $2130.00         
+Jacky Karman        9341      Factory Worker  $1056.00         
+Joe Larson          9452      Office Worker   $1450.00         
+Lary Madison        9432      Office Worker   $1500.00         
+Benjamin Franklin   9543      Factory Worker  $1304.00         
+George Albertson    9643      Factory Worker  $1400.00         
+Jack Orteda         9743      Office Worker   $1470.00         
+Carl Melon          9439      Factory Worker  $1016.00         
+Sandy Bachman       9555      Management      $2385.00         
+Mike Harison        9434      N/A             N/A             
+
+Employees sorted by ID: 
+
+Name                ID#       Job Type        Gross Salary    
+Jeff Smith          1234      Management      $1980.00         
+Jeff Summer         1294      Management      $2235.00         
+Jack Ali-Khan       2341      Factory Worker  $1000.00         
+Joe Lee             3452      Office Worker   $1370.00         
+Joe Lynche          3492      Office Worker   $1470.00         
+Micky Jordan        5104      N/A             N/A             
+Sara Jackson        5400      Factory Worker  $1080.00         
+Lory Mannville      5402      Management      $2460.00         
+Lary Mann           5432      Management      $2115.00         
+Mike Hammer         5434      N/A             N/A             
+Sara Jones          5439      Factory Worker  $1232.00         
+Sandy Beckman       5555      Management      $2505.00         
+George Washington   5643      Factory Worker  N/A             
+George Hamington    5673      Factory Worker  $1248.00         
+Sandra Barbs        5995      Management      $1950.00         
+Ben George          6543      Factory Worker  $1144.00         
+John Adam           6703      Office Worker   $1690.00         
+Jack Adams          6743      Office Worker   $1490.00         
+Barb Georgeville    6943      Factory Worker  $1304.00         
+Jeffery Stone       9234      Management      $2130.00         
+Jacky Karman        9341      Factory Worker  $1056.00         
+Lary Madison        9432      Office Worker   $1500.00         
+Mike Harison        9434      N/A             N/A             
+Carl Melon          9439      Factory Worker  $1016.00         
+Joe Larson          9452      Office Worker   $1450.00         
+Benjamin Franklin   9543      Factory Worker  $1304.00         
+Sandy Bachman       9555      Management      $2385.00         
+George Albertson    9643      Factory Worker  $1400.00         
+Jack Orteda         9743      Office Worker   $1470.00         
+Jack Khan           23414     Factory Worker  $960.00          
+
+Employees sorted by Last Name: 
+
+Name                ID#       Job Type        Gross Salary    
+John Adam           6703      Office Worker   $1690.00         
+Jack Adams          6743      Office Worker   $1490.00         
+George Albertson    9643      Factory Worker  $1400.00         
+Jack Ali-Khan       2341      Factory Worker  $1000.00         
+Sandy Bachman       9555      Management      $2385.00         
+Sandra Barbs        5995      Management      $1950.00         
+Sandy Beckman       5555      Management      $2505.00         
+Benjamin Franklin   9543      Factory Worker  $1304.00         
+Ben George          6543      Factory Worker  $1144.00         
+Barb Georgeville    6943      Factory Worker  $1304.00         
+George Hamington    5673      Factory Worker  $1248.00         
+Mike Hammer         5434      N/A             N/A             
+Mike Harison        9434      N/A             N/A             
+Sara Jackson        5400      Factory Worker  $1080.00         
+Sara Jones          5439      Factory Worker  $1232.00         
+Micky Jordan        5104      N/A             N/A             
+Jacky Karman        9341      Factory Worker  $1056.00         
+Jack Khan           23414     Factory Worker  $960.00          
+Joe Larson          9452      Office Worker   $1450.00         
+Joe Lee             3452      Office Worker   $1370.00         
+Joe Lynche          3492      Office Worker   $1470.00         
+Lary Madison        9432      Office Worker   $1500.00         
+Lary Mann           5432      Management      $2115.00         
+Lory Mannville      5402      Management      $2460.00         
+Carl Melon          9439      Factory Worker  $1016.00         
+Jack Orteda         9743      Office Worker   $1470.00         
+Jeff Smith          1234      Management      $1980.00         
+Jeffery Stone       9234      Management      $2130.00         
+Jeff Summer         1294      Management      $2235.00         
+George Washington   5643      Factory Worker  N/A             
+
+Employees sorted by Gross Salary: 
+
+Name                ID#       Job Type        Gross Salary    
+Mike Hammer         5434      N/A             N/A             
+Mike Harison        9434      N/A             N/A             
+Micky Jordan        5104      N/A             N/A             
+George Washington   5643      Factory Worker  N/A             
+Jack Khan           23414     Factory Worker  $960.00          
+Jack Ali-Khan       2341      Factory Worker  $1000.00         
+Carl Melon          9439      Factory Worker  $1016.00         
+Jacky Karman        9341      Factory Worker  $1056.00         
+Sara Jackson        5400      Factory Worker  $1080.00         
+Ben George          6543      Factory Worker  $1144.00         
+Sara Jones          5439      Factory Worker  $1232.00         
+George Hamington    5673      Factory Worker  $1248.00         
+Benjamin Franklin   9543      Factory Worker  $1304.00         
+Barb Georgeville    6943      Factory Worker  $1304.00         
+Joe Lee             3452      Office Worker   $1370.00         
+George Albertson    9643      Factory Worker  $1400.00         
+Joe Larson          9452      Office Worker   $1450.00         
+Joe Lynche          3492      Office Worker   $1470.00         
+Jack Orteda         9743      Office Worker   $1470.00         
+Jack Adams          6743      Office Worker   $1490.00         
+Lary Madison        9432      Office Worker   $1500.00         
+John Adam           6703      Office Worker   $1690.00         
+Sandra Barbs        5995      Management      $1950.00         
+Jeff Smith          1234      Management      $1980.00         
+Lary Mann           5432      Management      $2115.00         
+Jeffery Stone       9234      Management      $2130.00         
+Jeff Summer         1294      Management      $2235.00         
+Sandy Bachman       9555      Management      $2385.00         
+Lory Mannville      5402      Management      $2460.00         
+Sandy Beckman       5555      Management      $2505.00         
+
